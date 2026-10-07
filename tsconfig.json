@@ -1,0 +1,23 @@
+{
+  // Node runs the .ts sources directly under its type stripper; tsc only typechecks.
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    // The type stripper erases annotations without generating code, so enum, namespace and
+    // parameter properties are rejected here rather than failing at run time.
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "types": ["node", "vite/client"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "include": ["src/**/*", "web/src/**/*", "vite.config.ts"]
+}

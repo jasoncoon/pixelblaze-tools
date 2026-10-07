@@ -1,0 +1,5 @@
+backups
+node_modules
+out
+dist
+.DS_Store

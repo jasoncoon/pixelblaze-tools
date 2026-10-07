@@ -1,0 +1,29 @@
+{
+  "name": "pixelblaze-tools",
+  "version": "0.0.1",
+  "author": "Jason Coon",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "pbb": "node src/cli/pbb.ts",
+    "web": "vite",
+    "web:build": "vite build",
+    "test": "npm run typecheck && npm run tests",
+    "tests": "node --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "lz-string": "1.5.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.10.6",
+    "@types/node": "24.9.2",
+    "monaco-editor": "0.57.0",
+    "preact": "10.29.8",
+    "typescript": "6.0.3",
+    "vite": "8.3.3"
+  }
+}
